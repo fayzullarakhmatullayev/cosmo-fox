@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cosmo Fox</title>
+    <title>CosmoFox</title>
     <link rel="stylesheet" href="fonts/stylesheet.css" />
     <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="icon" href="images/logo-sm.png" />
     <script src="js/script.min.js" defer></script>
   </head>
   <body>
@@ -16,35 +17,32 @@
         <img src="images/logo.png" alt="logo " />
       </a>
 
-      <nav class="header__nav">
-        <a href="#" class="header__nav--link">Main</a>
-        <a href="#" class="header__nav--link">white paper</a>
-        <a href="#" class="header__nav--link">blog </a>
-      </nav>
-
-      <div class="header__lang">
-        <div class="header__lang--selected">
-          <img src="icons/polygon.svg" alt="polygon" /><span>EN</span>
-        </div>
-        <div class="header__lang--list">
-          <div class="header__lang--item" data-value="en">EN</div>
-          <div class="header__lang--item" data-value="ru">RU</div>
-        </div>
-      </div>
+      <ul class="header__nav">
+        <li>
+          <a href="#" class="header__nav--link">Main</a>
+        </li>
+        <li>
+          <a href="#" class="header__nav--link">white paper</a>
+        </li>
+        <li>
+          <a href="#" class="header__nav--link">blog </a>
+        </li>
+      </ul>
     </div>
   </div>
 </header>
  <main class="main">
   <div class="container">
-    <div class="main__wrapper">
-      <div class="main__img">
-        <img src="images/fox_crew.png" alt="fox_crew" class="main__img--fox" />
-        <img src="images/crew_wanted.png" alt="crew_wanted" class="main__img--wanted" />
-      </div>
-      <div class="main__content">
-        <h1 class="main__content--title">EXPLORE SPACE</h1>
-        <a href="#" class="main__content--btn"><span>JOIN NOW</span></a>
-      </div>
+    <div class="main__content">
+      <h1 class="main__content--title">
+        <span>DRILL. LOOT. REPEAT.</span>
+        <span>THEN BUILD AN EMPIRE.</span>
+      </h1>
+      <p class="main__content--subtitle">
+        CosmoFox is a Telegram-native Web3 game. Start as a space-mining fox, drilling planets,
+        collecting Dust, and upgrading your ship!
+      </p>
+      <a href="#" class="main__content--btn"><span>JOIN NOW</span></a>
     </div>
   </div>
 </main>
@@ -55,15 +53,21 @@
       <div class="footer__social">
         <a href="#" class="footer__social--link">
           <img src="icons/telegram.svg" alt="telegram" />
+          <p>chat</p>
+        </a>
+        <a href="#" class="footer__social--link">
+          <img src="icons/telegram.svg" alt="telegram" />
+          <p>news</p>
         </a>
         <a href="#" class="footer__social--link">
           <img src="icons/discord.svg" alt="discord" />
+          <p>discord</p>
         </a>
         <a href="#" class="footer__social--link">
           <img src="icons/twitter.svg" alt="twitter" />
+          <p>x.com</p>
         </a>
       </div>
-      <div class="footer__content">18+ only. free to play.</div>
     </div>
   </div>
 </footer>
