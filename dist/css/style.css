@@ -106,6 +106,10 @@ body {
      object-fit: contain;
 }
 
+.header__logo--mobile {
+  display: none;
+}
+
 .header__nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -142,6 +146,10 @@ body {
 .header__nav li:hover::after,
 .header__nav li:hover::before {
   opacity: 1;
+}
+
+.header__nav li:hover a {
+  color: var(--color-white);
 }
 
 .header__nav li::after {
@@ -188,6 +196,8 @@ body {
   margin-top: 28px;
   z-index: 10;
   position: relative;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .main {
@@ -347,4 +357,109 @@ body {
   color: var(--color-white);
   font-weight: 300;
   text-transform: uppercase;
+}
+
+@media (max-width: 991.98px) {
+  body {
+    background-image: url("../images/main-bg-sm.jpg");
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .header__wrapper {
+    padding: 34px 0 9px;
+    border-width: 1px;
+  }
+
+  .header__logo {
+    margin-left: 0;
+    width: 29px;
+    height: 35px;
+  }
+
+  .header__logo--desktop {
+    display: none;
+  }
+
+  .header__logo--mobile {
+    display: block;
+  }
+
+  .header__nav {
+    gap: 5px;
+    margin-left: -20px;
+  }
+
+  .header__nav li {
+    padding: 0 5px;
+  }
+
+  .header__nav a {
+    font-size: 16px;
+  }
+
+  .main .container {
+    padding: 0 13px;
+  }
+
+  .main {
+    padding-bottom: 73px;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+
+  .main__content {
+    margin-left: 0;
+  }
+
+  .main__content--title {
+    margin-left: 0;
+    margin-bottom: 0;
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  .main__content--title span:last-child {
+    margin-left: 0;
+  }
+
+  .main__content--subtitle {
+    margin-left: 0;
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+
+  .main__content--btn {
+    min-width: 211px;
+    height: 63px;
+    font-size: 25px;
+    clip-path: polygon(10px 0%, 100% 0%, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0% 100%, 0% 10px);
+  }
+
+  .footer__wrapper {
+    padding: 14px 20px 23px 7px;
+  }
+
+  .footer__social {
+    margin: 0;
+  }
+
+  .footer__social--link {
+    margin-right: 25px;
+  }
+
+  .footer__social--link:nth-child(3) {
+    margin-right: 12px;
+  }
+
+  .footer__social--link img {
+    zoom: 0.8;
+  }
+
+  .footer__social--link p {
+    font-size: 10px;
+  }
 }

@@ -62,6 +62,10 @@ body {
   min-height: 100dvh;
 
   background: url('../images/main-bg.jpg') no-repeat center top / cover;
+
+  @include mobile {
+    background-image: url('../images/main-bg-sm.jpg');
+  }
 }
 
 .container {
@@ -69,6 +73,10 @@ body {
   width: 100%;
   padding: 0 20px;
   margin: 0 auto;
+
+  @include mobile {
+    padding: 0 15px;
+  }
 }
 
 // Header
@@ -84,6 +92,11 @@ body {
     border-bottom: 2px solid var(--color-white);
     padding: 38px 0 23px;
     position: relative;
+
+    @include mobile {
+      padding: 34px 0 9px;
+      border-width: 1px;
+    }
   }
 
   &__logo {
@@ -91,9 +104,28 @@ body {
     margin-left: -20px;
     width: 100%;
     overflow: hidden;
+
+    @include mobile {
+      margin-left: 0;
+      width: 29px;
+      height: 35px;
+    }
     img {
       width: 100%;
       object-fit: contain;
+    }
+
+    &--desktop {
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      display: none;
+      @include mobile {
+        display: block;
+      }
     }
   }
 
@@ -106,6 +138,11 @@ body {
     left: 50.8%;
     transform: translate(-50%, -50%);
     height: 100%;
+
+    @include mobile {
+      gap: 5px;
+      margin-left: -20px;
+    }
     li {
       position: relative;
       padding: 0 13px;
@@ -117,6 +154,13 @@ body {
       &:hover::after,
       &:hover::before {
         opacity: 1;
+      }
+      &:hover a {
+        color: var(--color-white);
+      }
+
+      @include mobile {
+        padding: 0 5px;
       }
       &::after {
         content: '';
@@ -164,6 +208,10 @@ body {
       margin-top: 28px;
       z-index: 10;
       position: relative;
+      transition: all 0.2s ease;
+      @include mobile {
+        font-size: 16px;
+      }
     }
   }
 }
@@ -176,10 +224,25 @@ body {
   align-items: center;
   justify-content: center;
 
+  .container {
+    @include mobile {
+      padding: 0 13px;
+    }
+  }
+
+  @include mobile {
+    padding-bottom: 73px;
+    align-items: flex-end;
+  }
+
   &__content {
     max-width: 830px;
     width: 100%;
     margin-left: 42px;
+
+    @include mobile {
+      margin-left: 0;
+    }
     &--title {
       color: var(--color-white);
       font-size: 47px;
@@ -195,6 +258,16 @@ body {
           margin-left: 20px;
         }
       }
+      @include mobile {
+        margin-left: 0;
+        margin-bottom: 0;
+        span:last-child {
+          margin-left: 0;
+        }
+
+        font-size: 24px;
+        margin-bottom: 25px;
+      }
     }
 
     &--subtitle {
@@ -206,6 +279,11 @@ body {
       margin-bottom: 72px;
       text-align: center;
       margin-left: -8px;
+      @include mobile {
+        margin-left: 0;
+        font-size: 20px;
+        margin-bottom: 25px;
+      }
     }
     &--btn {
       display: block;
@@ -243,6 +321,21 @@ body {
       span {
         margin-top: 3px;
       }
+
+      @include mobile {
+        min-width: 211px;
+        height: 63px;
+        font-size: 25px;
+
+        clip-path: polygon(
+          10px 0%,
+          /* top-left clipped */ 100% 0%,
+          100% calc(100% - 10px),
+          calc(100% - 10px) 100%,
+          /* bottom-right clipped */ 0% 100%,
+          0% 10px
+        );
+      }
     }
   }
 }
@@ -255,6 +348,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include mobile {
+      padding: 14px 20px 23px 7px;
+    }
   }
 
   &__social {
@@ -263,6 +360,10 @@ body {
 
     margin-bottom: -3px;
 
+    @include mobile {
+      margin: 0;
+    }
+
     &--link {
       display: flex;
       flex-direction: column;
@@ -270,6 +371,19 @@ body {
       gap: 7px;
       text-align: center;
       margin-right: 37px;
+
+      @include mobile {
+        margin-right: 25px;
+        &:nth-child(3) {
+          margin-right: 12px;
+        }
+      }
+
+      img {
+        @include mobile {
+          zoom: 0.8;
+        }
+      }
 
       &:nth-child(2) {
         margin-right: 27px;
@@ -284,6 +398,10 @@ body {
         font-weight: 700;
         color: var(--color-white);
         text-align: center;
+
+        @include mobile {
+          font-size: 10px;
+        }
       }
     }
   }
