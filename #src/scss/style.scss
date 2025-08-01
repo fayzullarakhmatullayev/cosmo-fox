@@ -63,6 +63,10 @@ body {
 
   background: url('../images/main-bg.jpg') no-repeat center top / cover;
 
+  @include laptop {
+    background-image: url('../images/main-bg-md.jpg');
+  }
+
   @include mobile {
     background-image: url('../images/main-bg-sm.jpg');
   }
@@ -156,9 +160,9 @@ body {
     }
 
     @include mobile {
-      gap: 5px;
-      margin-left: -20px;
-      left: 50.8%;
+      gap: 9px;
+      margin-left: -19px;
+      left: 50%;
     }
     li {
       position: relative;
@@ -186,6 +190,9 @@ body {
 
       @include mobile {
         padding: 0 5px;
+        &:last-child {
+          margin-left: 0px;
+        }
       }
 
       &::after {
@@ -242,8 +249,8 @@ body {
       }
 
       @include mobile {
-        font-size: 16px;
-        margin-top: 20px;
+        font-size: 15px;
+        margin-top: 25px;
       }
     }
   }
@@ -309,6 +316,9 @@ body {
       @include mobile {
         margin-left: 0;
         margin-bottom: 0;
+        span:first-child {
+          margin-right: 10px;
+        }
         span:last-child {
           margin-left: 0;
         }

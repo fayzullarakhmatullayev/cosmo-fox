@@ -360,6 +360,10 @@ body {
 }
 
 @media (max-width: 1450.98px) {
+  body {
+    background-image: url("../images/main-bg-md.jpg");
+  }
+
   .container {
     padding: 0 45px;
   }
@@ -450,18 +454,22 @@ body {
   }
 
   .header__nav {
-    gap: 5px;
-    margin-left: -20px;
-    left: 50.8%;
+    gap: 9px;
+    margin-left: -19px;
+    left: 50%;
   }
 
   .header__nav li {
     padding: 0 5px;
   }
 
+  .header__nav li:last-child {
+    margin-left: 0px;
+  }
+
   .header__nav a {
-    font-size: 16px;
-    margin-top: 20px;
+    font-size: 15px;
+    margin-top: 25px;
   }
 
   .main .container {
@@ -484,6 +492,10 @@ body {
     margin-bottom: 0;
     font-size: 24px;
     margin-bottom: 25px;
+  }
+
+  .main__content--title span:first-child {
+    margin-right: 10px;
   }
 
   .main__content--title span:last-child {
