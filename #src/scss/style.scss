@@ -61,14 +61,14 @@ body {
   flex-direction: column;
   min-height: 100dvh;
 
-  background: url('../images/main-bg.jpg') no-repeat center top / cover;
+  background: url('../img/main-bg.jpg') no-repeat center top / cover;
 
   @include laptop {
-    background-image: url('../images/main-bg-md.jpg');
+    background-image: url('../img/main-bg-md.jpg');
   }
 
   @include mobile {
-    background-image: url('../images/main-bg-sm.jpg');
+    background-image: url('../img/main-bg-sm.jpg');
   }
 }
 
