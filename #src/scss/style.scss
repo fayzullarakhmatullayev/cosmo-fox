@@ -74,6 +74,10 @@ body {
   padding: 0 20px;
   margin: 0 auto;
 
+  @include laptop {
+    padding: 0 45px;
+  }
+
   @include mobile {
     padding: 0 15px;
   }
@@ -90,8 +94,12 @@ body {
     justify-content: space-between;
     gap: 20px;
     border-bottom: 2px solid var(--color-white);
-    padding: 38px 0 23px;
+    padding: 47px 0 26px 42px;
     position: relative;
+
+    @include laptop {
+      padding: 61px 10px 22px 21px;
+    }
 
     @include mobile {
       padding: 34px 0 9px;
@@ -100,10 +108,13 @@ body {
   }
 
   &__logo {
-    max-width: 330px;
-    margin-left: -20px;
+    max-width: 278px;
     width: 100%;
     overflow: hidden;
+
+    @include laptop {
+      max-width: 230px;
+    }
 
     @include mobile {
       margin-left: 0;
@@ -139,9 +150,15 @@ body {
     transform: translate(-50%, -50%);
     height: 100%;
 
+    @include laptop {
+      gap: 55px;
+      left: 53.4%;
+    }
+
     @include mobile {
       gap: 5px;
       margin-left: -20px;
+      left: 50.8%;
     }
     li {
       position: relative;
@@ -151,6 +168,7 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
+
       &:hover::after,
       &:hover::before {
         opacity: 1;
@@ -159,9 +177,17 @@ body {
         color: var(--color-white);
       }
 
+      @include laptop {
+        padding: 0 20px;
+        &:last-child {
+          margin-left: 27px;
+        }
+      }
+
       @include mobile {
         padding: 0 5px;
       }
+
       &::after {
         content: '';
         position: absolute;
@@ -185,7 +211,7 @@ body {
       &::before {
         content: '';
         position: absolute;
-        width: 80%;
+        width: 100%;
         height: 2px;
         display: block;
         left: 50%;
@@ -209,8 +235,15 @@ body {
       z-index: 10;
       position: relative;
       transition: all 0.2s ease;
+
+      @include laptop {
+        font-size: 30px;
+        margin-top: 45px;
+      }
+
       @include mobile {
         font-size: 16px;
+        margin-top: 20px;
       }
     }
   }
@@ -238,7 +271,14 @@ body {
   &__content {
     max-width: 830px;
     width: 100%;
-    margin-left: 42px;
+    margin-left: 45px;
+    margin-top: -23px;
+
+    @include laptop {
+      max-width: 652px;
+      margin-left: -13px;
+      margin-top: -15px;
+    }
 
     @include mobile {
       margin-left: 0;
@@ -249,15 +289,23 @@ body {
       line-height: 1.1;
       text-transform: uppercase;
       text-align: center;
-      margin-bottom: 35px;
+      margin-bottom: 38px;
       font-weight: 700;
       margin-left: -18px;
+
       span {
         display: block;
         &:last-child {
           margin-left: 20px;
         }
       }
+
+      @include laptop {
+        font-size: 32px;
+        margin-bottom: 30px;
+        margin-left: 60px;
+      }
+
       @include mobile {
         margin-left: 0;
         margin-bottom: 0;
@@ -276,13 +324,20 @@ body {
       font-size: 28px;
       line-height: 1.1;
       color: rgba(194, 211, 230, 1);
-      margin-bottom: 72px;
+      margin-bottom: 38px;
       text-align: center;
       margin-left: -8px;
+      @include laptop {
+        font-size: 22px;
+        margin-bottom: 47px;
+        transform: translateX(41px);
+      }
+
       @include mobile {
         margin-left: 0;
         font-size: 20px;
         margin-bottom: 25px;
+        transform: translateX(0px);
       }
     }
     &--btn {
@@ -322,6 +377,12 @@ body {
         margin-top: 3px;
       }
 
+      @include laptop {
+        min-width: 289px;
+        height: 79px;
+        font-size: 30px;
+      }
+
       @include mobile {
         min-width: 211px;
         height: 63px;
@@ -348,6 +409,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include laptop {
+      padding: 16px 20px 19px 23px;
+    }
 
     @include mobile {
       padding: 14px 20px 23px 7px;

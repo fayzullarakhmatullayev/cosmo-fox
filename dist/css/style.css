@@ -89,13 +89,12 @@ body {
           justify-content: space-between;
   gap: 20px;
   border-bottom: 2px solid var(--color-white);
-  padding: 38px 0 23px;
+  padding: 47px 0 26px 42px;
   position: relative;
 }
 
 .header__logo {
-  max-width: 330px;
-  margin-left: -20px;
+  max-width: 278px;
   width: 100%;
   overflow: hidden;
 }
@@ -170,7 +169,7 @@ body {
 .header__nav li::before {
   content: "";
   position: absolute;
-  width: 80%;
+  width: 100%;
   height: 2px;
   display: block;
   left: 50%;
@@ -219,7 +218,8 @@ body {
 .main__content {
   max-width: 830px;
   width: 100%;
-  margin-left: 42px;
+  margin-left: 45px;
+  margin-top: -23px;
 }
 
 .main__content--title {
@@ -228,7 +228,7 @@ body {
   line-height: 1.1;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 35px;
+  margin-bottom: 38px;
   font-weight: 700;
   margin-left: -18px;
 }
@@ -247,7 +247,7 @@ body {
   font-size: 28px;
   line-height: 1.1;
   color: rgb(194, 211, 230);
-  margin-bottom: 72px;
+  margin-bottom: 38px;
   text-align: center;
   margin-left: -8px;
 }
@@ -359,6 +359,68 @@ body {
   text-transform: uppercase;
 }
 
+@media (max-width: 1450.98px) {
+  .container {
+    padding: 0 45px;
+  }
+
+  .header__wrapper {
+    padding: 61px 10px 22px 21px;
+  }
+
+  .header__logo {
+    max-width: 230px;
+  }
+
+  .header__nav {
+    gap: 55px;
+    left: 53.4%;
+  }
+
+  .header__nav li {
+    padding: 0 20px;
+  }
+
+  .header__nav li:last-child {
+    margin-left: 27px;
+  }
+
+  .header__nav a {
+    font-size: 30px;
+    margin-top: 45px;
+  }
+
+  .main__content {
+    max-width: 652px;
+    margin-left: -13px;
+    margin-top: -15px;
+  }
+
+  .main__content--title {
+    font-size: 32px;
+    margin-bottom: 30px;
+    margin-left: 60px;
+  }
+
+  .main__content--subtitle {
+    font-size: 22px;
+    margin-bottom: 47px;
+    -webkit-transform: translateX(41px);
+        -ms-transform: translateX(41px);
+            transform: translateX(41px);
+  }
+
+  .main__content--btn {
+    min-width: 289px;
+    height: 79px;
+    font-size: 30px;
+  }
+
+  .footer__wrapper {
+    padding: 16px 20px 19px 23px;
+  }
+}
+
 @media (max-width: 991.98px) {
   body {
     background-image: url("../images/main-bg-sm.jpg");
@@ -390,6 +452,7 @@ body {
   .header__nav {
     gap: 5px;
     margin-left: -20px;
+    left: 50.8%;
   }
 
   .header__nav li {
@@ -398,6 +461,7 @@ body {
 
   .header__nav a {
     font-size: 16px;
+    margin-top: 20px;
   }
 
   .main .container {
@@ -430,6 +494,9 @@ body {
     margin-left: 0;
     font-size: 20px;
     margin-bottom: 25px;
+    -webkit-transform: translateX(0px);
+        -ms-transform: translateX(0px);
+            transform: translateX(0px);
   }
 
   .main__content--btn {
