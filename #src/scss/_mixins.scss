@@ -1,10 +1,20 @@
-@mixin laptop {
-  @media (max-width: 1450.98px) {
+@mixin laptopBig {
+  @media (max-width: 1550.98px) {
+    @content;
+  }
+}
+@mixin laptopSm {
+  @media (max-width: 1200.98px) {
     @content;
   }
 }
 @mixin mobile {
-  @media (max-width: 991.98px) {
+  @media (max-width: 575.98px) {
+    @content;
+  }
+}
+@mixin mobileSm {
+  @media (max-width: 360.98px) {
     @content;
   }
 }
